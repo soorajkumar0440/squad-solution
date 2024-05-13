@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.3/lottie.min.js"></script>
+</head>
+
+<body>
+  <style>
+    .navbar-nav {
+      margin-left: 57%;
+      font-family: Poppins, sans-serif;
+      font-weight: bold;
+      color: black;
+    }
+
+    .navbar-nav .nav-link {
+      padding: .5rem 1rem;
+      transition: color 0.3s;
+      text-decoration: none;
+      color: orangered;
+    }
+
+    .navbar-nav .nav-link:hover {
+
+      text-decoration: underline;
+    }
+
+    .card {
+      /* display: flex; */
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      /* overflow: hidden; */
+      width: 1000px;
+    }
+
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .container {
+      display: flex;
+      margin-top: 5%;
+    }
+
+
+    .text {
+      /* font-size: 20px; */
+      margin-right: 10%;
+      margin-top: 7%;
+    }
+
+    .loader-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      color: orangered;
+    }
+
+    .loader-line {
+      animation: scroll 3s linear infinite;
+      background-color: orangered;
+      width: 50%;
+      height: 3px;
+      border-radius: 50px;
+      text-align: left;
+    }
+
+
+
+    @keyframes scroll {
+      0% {
+        width: 0;
+        background: orangered;
+      }
+
+      100% {
+        width: 100%;
+        background: orangered;
+      }
+    }
+  </style>
+
+  <div class="loader-wrapper" id="loader">
+    <div class="loader">
+      <img class="loader-image" src="logo.webp" height="70px" width="100%" alt="Loading...">
+      <div class="loader-line">
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+
+    <img src="logo.webp" alt="" height="50px">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="sooraj.html">Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="service.html">Services</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="customers.html" style="color: orangered;">Customers & Indusries<span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about us.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="container mt-5">
+
+    <div class="text">
+      <h1 style="color: orangered;">Customer & Industries</h1>
+      <p>At Squad Tech Solutions, we serve a wide array of clients spanning various industries. From small businesses
+        and educational institutions to financial companies and even the Governmental institutions, our clientele is
+        diverse and expansive. Our expertise extends across multiple sectors, allowing us to provide tailored digital
+        solutions to meet the unique needs and goals of each client.
+
+    </div>
+    <div class="image">
+      <img src="c1" height="320px" width="450px" style="margin-left: 20%; margin-top: 3%;">
+    </div>
+  </div>
+
+
+  <div class="flex mb-4">
+    <div class="col-sm-12">
+
+      <div class="card-body my-card">
+
+        <h3 class="card-title"
+          style="margin-top: 5%; margin-left: 5%; font-family:  Poppins, sans-serif; color: orangered; ;"> AS A LEADING
+          PROVIDER OF A FULL RANGE OF IT SOLUTIONS, PRODUCTS AND SERVICES,</h3>
+        <p class="card-text" style="margin-left: 5%;">
+          At Squad Tech Solutions, we serve a wide array of clients spanning various industries. From small businesses
+          and educational institutions to financial companies and even the Governmental institutions, our clientele is
+          diverse and expansive. Our expertise extends across multiple sectors, allowing us to provide tailored digital
+          solutions to meet the unique needs and goals of each client.
+        </p>
+        <hr style="margin-top: 5%; color: black;">
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="container mt-1">
+
+    <div class="text">
+      <h1 style="color: orangered;">Retail and Ecommerce</h1>
+      <p>At Squad Tech Solutions, we serve a wide array of clients spanning various industries. From small businesses
+        and educational institutions to financial companies and even the Governmental institutions, our clientele is
+        diverse and expansive. Our expertise extends across multiple sectors, allowing us to provide tailored digital
+        solutions to meet the unique needs and goals of each client.
+
+    </div>
+    <div class="image">
+      <img src="c2.gif" height="250px" width="380px" style="margin-left: 20%; margin-top: 3%;">
+    </div>
+  </div>
+  <hr style="margin-top: 5%; color: black;">
+
+  <div class="container mt-1">
+
+    <div class="text">
+      <h1 style="color: orangered;">Marketing Agencies</h1>
+      <p>At Squad Tech Solutions, we serve a wide array of clients spanning various industries. From small businesses
+        and educational institutions to financial companies and even the Governmental institutions, our clientele is
+        diverse and expansive. Our expertise extends across multiple sectors, allowing us to provide tailored digital
+        solutions to meet the unique needs and goals of each client.
+
+    </div>
+    <div class="image">
+      <img src="c3.gif" height="250px" width="380px" style="margin-left: 20%; margin-top: 6%;">
+    </div>
+  </div>
+  <hr style="margin-top: 5%; color: black;">
+
+
+  <div class="container mt-1">
+
+    <div class="text">
+      <h1 style="color: orangered;">Hospitality </h1>
+      <p>At Squad Tech Solutions, we serve a wide array of clients spanning various industries. From small businesses
+        and educational institutions to financial companies and even the Governmental institutions, our clientele is
+        diverse and expansive. Our expertise extends across multiple sectors, allowing us to provide tailored digital
+        solutions to meet the unique needs and goals of each client.
+
+    </div>
+    <div class="image">
+      <img src="c4.gif" height="250px" width="380px" style="margin-left: 20%; margin-top: 6%;">
+    </div>
+  </div>
+  <hr style="margin-top: 5%; color: black;">
+
+
+  <div class="container mt-1">
+
+    <div class="text">
+      <h1 style="color: orangered;">Education and E-learning </h1>
+      <p>At Squad Tech Solutions, we serve a wide array of clients spanning various industries. From small businesses
+        and educational institutions to financial companies and even the Governmental institutions, our clientele is
+        diverse and expansive. Our expertise extends across multiple sectors, allowing us to provide tailored digital
+        solutions to meet the unique needs and goals of each client.
+
+    </div>
+    <div class="image">
+      <img src="c5.gif" height="250px" width="380px" style="margin-left: 20%; margin-top: 6%;">
+    </div>
+  </div>
+  <hr style="margin-top: 5%; color: black;">
+
+
+  <div class="container mt-1">
+
+    <div class="text">
+      <h1 style="color: orangered;">Technology </h1>
+      <p>At Squad Tech Solutions, we serve a wide array of clients spanning various industries. From small businesses
+        and educational institutions to financial companies and even the Governmental institutions, our clientele is
+        diverse and expansive. Our expertise extends across multiple sectors, allowing us to provide tailored digital
+        solutions to meet the unique needs and goals of each client.
+
+    </div>
+    <div class="image">
+      <img src="c6.gif" height="250px" width="380px" style="margin-left: 20%; margin-top: 6%;">
+    </div>
+  </div>
+
+
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      setTimeout(function () {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("content").style.display = "block";
+      }, 2000);
+    });
+  </script>
+
+  <footer class="text-center text-lg-start text-white mt-5" style="background-color: rgb(34, 33, 33)">
+
+    <div class="container p-4 pb-0">
+
+      <section class="">
+
+        <div class="row">
+
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 mr-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold" style="color: orangered;">
+              Contact Us
+            </h5>
+
+            <h6 style="color: orangered;">
+
+              Main Office/UK Office
+            </h6>
+            <p>The Garage, 114 Markhouse Road, E17 8BG, London</p>
+            <h6 style="color: orangered;">
+
+              US Office
+            </h6>
+            <p>428 Southwest 80th Avenue, North Lauderdale, Florida 33068</p>
+          </div>
+
+
+
+          <hr class="w-100 clearfix d-md-none" />
+
+
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold" style="color: orangered;">Recent News</h5>
+            <p>
+              <img src="n1.png" width="50px" height="30px">
+              <a class="text-white">MDBootstrap</a>
+            </p>
+            <p>
+              <img src="n2.jpg" width="50px" height="30px">
+              <a class="text-white">MDWordPress</a>
+            </p>
+
+            <p>
+              <img src="n3.jpg" width="50px" height="30px">
+              <a class="text-white">MDWordPress</a>
+            </p>
+          </div>
+
+
+          <hr class="w-100 clearfix d-md-none" />
+
+
+
+
+          <hr class="w-100 clearfix d-md-none" />
+
+
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-1">
+            <img src="logo.webp" height="80px" width="200px">
+            <p><i class=""></i> info@gmail.com</p>
+            <p><i class=""></i> +1 (954) 417 7926
+
+            </p>
+            <p><i class=""></i> © 2023, SQUAD TECH SOLUTION</p>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <hr class="my-3">
+
+
+      <section class="p-3 pt-0">
+        <div class="row d-flex align-items-center">
+
+          <div class="col-md-3 col-lg-8 text-center text-md-start">
+
+
+
+          </div>
+
+
+
+          <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+
+
+
+
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+  </footer>
+
+  <body>
+
+</html>

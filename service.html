@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <style>
+    .navbar-nav {
+      margin-left: 57%;
+      font-family: Poppins, sans-serif;
+    }
+
+    .B1 {
+      margin-top: 55px;
+    }
+
+    .B2 {
+      margin-left: 20%;
+
+    }
+
+    .B3 {
+      margin-top: 5%;
+      margin-left: 5%;
+      border-radius: calc();
+      display: flex;
+      border-radius: 20px;
+
+    }
+
+    .my-card:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      color: grey;
+      border-radius: 40px;
+      border: 20px;
+      border: linen;
+      /* border: 1px solid #000; */
+      border-color: #000;
+      background-color: #1e1e1e;
+
+    }
+
+    .my-card {
+      border: 1px solid;
+      border-radius: 30px;
+      border-color: rgb(224, 212, 212);
+    }
+
+    .B2 {
+      margin-top: 15%;
+      display: flex;
+      justify-content: center;
+      padding-top: 5%;
+
+
+      overflow: hidden;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .card img {
+      width: 50%;
+      height: auto;
+
+    }
+
+    .card-content {
+      /* padding-top: 200px;
+    padding: 10px; */
+      width: 50%;
+    }
+
+    .btn {
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 15px;
+      padding: 10px 20px;
+      border: 1px solid;
+      cursor: pointer;
+      font-size: 15px;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: white;
+
+    }
+
+    .ali {
+      margin-left: 2%;
+      margin-top: 50px;
+    }
+
+
+    .loader-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      color: orangered;
+    }
+
+    .loader-line {
+      animation: scroll 3s linear infinite;
+      background-color: orangered;
+      width: 50%;
+      height: 3px;
+      border-radius: 50px;
+      text-align: left;
+    }
+
+
+
+    @keyframes scroll {
+      0% {
+        width: 0;
+        background: orangered;
+      }
+
+      100% {
+        width: 100%;
+        background: orangered;
+      }
+    }
+  </style>
+
+  <button class="btn mtop-20">Get In Touch</button>
+
+
+  </style>
+
+  <div class="loader-wrapper" id="loader">
+    <div class="loader">
+      <img class="loader-image" src="logo.webp" height="70px" width="100%" alt="Loading...">
+      <div class="loader-line">
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+
+      <img src="logo.webp" alt="" height="50px">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="sooraj.html">Home </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="service.html" style="color: orangered;">Services<span
+                class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="customers.html">Customers & Indusries</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about us.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="B1">
+      <video src="v1.mp4" autoplay muted loop="true" preload="none" height="500px" width="100%"></video>
+    </div>
+
+    <div class="B2">
+      <div class="row">
+
+
+        <div class="card-body">
+
+          <h3 class="card-title" style="font-size: 60px; font-family:Poppins, sans-serif ;"> <img src="design.webp"
+              height="250px" width="250px">Design</h3>
+          <p class="card-text">From UI and UX Designing to Wireframing and Logo Designing, we create visually stunning
+            interfaces that elevate user experiences. Our meticulous attention to detail and deep understanding of user
+            behavior ensures designs that captivate and leave a lasting impact. Partner with Squad Tech to unlock your
+            brand's true potential through our exceptional design services.</p>
+          <button class="btn mtop-20">Get In Touch</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="B3">
+      <div class="row">
+        <div class="col-sm-4">
+
+          <div class="card-body my-card">
+
+            <h5 class="card-title"> <img src="ui design.jpg" height="50px" width="50px">Ui Design</h5>
+            <p class="card-text">
+              Our team of UI Designing experts brings your ideas to life, creating intuitive user interfaces that
+              enhance
+              the user experience.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card-body my-card">
+
+            <h5 class="card-title"><img src="ux design.png" height="50px" width="50px">Ui Design</h5>
+            <p class="card-text">
+              Our team of UI Designing experts brings your ideas to life, creating intuitive user interfaces that
+              enhance
+              the user experience.
+            </p>
+
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card-body my-card">
+
+            <h5 class="card-title"><img src="wire.png" height="50px" width="50px">WireFraming</h5>
+            <p class="card-text">
+              Our team of UI Designing experts brings your ideas to life, creating intuitive user interfaces that
+              enhance
+              the user experience.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+
+    <div class="B2">
+      <div class="row">
+
+
+        <div class="card-body">
+
+          <h3 class="card-title" style="font-size: 60px; font-family:Poppins, sans-serif ;"> <img src="development.webp"
+              height="250px" width="250px">Development</h3>
+          <p class="card-text">From UI and UX Designing to Wireframing and Logo Designing, we create visually stunning
+            interfaces that elevate user experiences. Our meticulous attention to detail and deep understanding of user
+            behavior ensures designs that captivate and leave a lasting impact. Partner with Squad Tech to unlock your
+            brand's true potential through our exceptional design services.</p>
+          <button class="btn mtop-20">Get In Touch</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="B3">
+      <div class="row">
+        <div class="col-sm-4 ">
+
+          <div class="card-body my-card">
+
+            <h5 class="card-title"><img src="web.png" height="50px" width="50px">Web Design</h5>
+            <p class="card-text">
+              Our team of skilled designers combines aesthetics with functionality to create captivating online
+              experiences. From seamless navigation to captivating graphics, we craft websites that leave a lasting
+              impression on your audience.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card-body my-card">
+
+            <h5 class="card-title"><img src="ecommerce.png" height="50px" width="50px">Ecommerce Solution</h5>
+            <p class="card-text">
+              Our team of skilled designers combines aesthetics with functionality to create captivating online
+              experiences. From seamless navigation to captivating graphics, we craft websites that leave a lasting
+              impression on your audience.
+            </p>
+
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card-body my-card">
+
+            <h5 class="card-title"><img src="seo.png" height="50px" width="50px">Web Optimization & Seo</h5>
+            <p class="card-text">
+              Our team of skilled designers combines aesthetics with functionality to create captivating online
+              experiences. From seamless navigation to captivating graphics, we craft websites that leave a lasting
+              impression on your audience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="B2">
+      <div class="row">
+
+
+        <div class="card-body">
+
+          <h3 class="card-title" style="font-size: 60px; font-family:Poppins, sans-serif ;"> <img src="branding.webp"
+              height="160px" width="150px">Branding</h3>
+          <p class="card-text">From UI and UX Designing to Wireframing and Logo Designing, we create visually stunning
+            interfaces that elevate user experiences. Our meticulous attention to detail and deep understanding of user
+            behavior ensures designs that captivate and leave a lasting impact. Partner with Squad Tech to unlock your
+            brand's true potential through our exceptional design services.</p>
+          <button class="btn mtop-20">Get In Touch</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="B3">
+      <div class="row">
+        <div class="col-sm-4">
+
+          <div class="card-body my-card">
+
+            <h5 class="card-title"> <img src="ui design.jpg" height="50px" width="50px">Ui Design</h5>
+            <p class="card-text"> Our team of skilled designers combines aesthetics with functionality to create
+              captivating online
+              experiences. From seamless navigation to captivating graphics, we craft websites that leave a lasting
+              impression on your audience.</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card-body my-card">
+
+            <h5 class="card-title"><img src="ux design.png" height="50px" width="50px">Ui Design</h5>
+            <p class="card-text"> Our team of skilled designers combines aesthetics with functionality to create
+              captivating online
+              experiences. From seamless navigation to captivating graphics, we craft websites that leave a lasting
+              impression on your audience.</p>
+
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card-body my-card">
+
+            <h5 class="card-title"><img src="wire.png" height="50px" width="50px">WireFraming</h5>
+            <p class="card-text"> Our team of skilled designers combines aesthetics with functionality to create
+              captivating online
+              experiences. From seamless navigation to captivating graphics, we craft websites that leave a lasting
+              impression on your audience.</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+
+        setTimeout(function () {
+          document.getElementById("loader").style.display = "none";
+          document.getElementById("content").style.display = "block";
+        }, 2000);
+      });
+    </script>
+
+
+    <footer class="text-center text-lg-start text-white mt-5" style="background-color: rgb(34, 33, 33)">
+
+      <div class="container p-4 pb-0">
+
+        <section class="">
+
+          <div class="row">
+
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 mr-3">
+              <h5 class="text-uppercase mb-4 font-weight-bold" style="color: orangered;">
+                Contact Us
+              </h5>
+
+              <h6 style="color: orangered;">
+
+                Main Office/UK Office
+              </h6>
+              <p>The Garage, 114 Markhouse Road, E17 8BG, London</p>
+              <h6 style="color: orangered;">
+
+                US Office
+              </h6>
+              <p>428 Southwest 80th Avenue, North Lauderdale, Florida 33068</p>
+            </div>
+
+
+
+            <hr class="w-100 clearfix d-md-none" />
+
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h5 class="text-uppercase mb-4 font-weight-bold" style="color: orangered;">Recent News</h5>
+              <p>
+                <img src="n1.png" width="50px" height="30px">
+                <a class="text-white">MDBootstrap</a>
+              </p>
+              <p>
+                <img src="n2.jpg" width="50px" height="30px">
+                <a class="text-white">MDWordPress</a>
+              </p>
+
+              <p>
+                <img src="n3.jpg" width="50px" height="30px">
+                <a class="text-white">MDWordPress</a>
+              </p>
+            </div>
+
+
+            <hr class="w-100 clearfix d-md-none" />
+
+
+
+
+            <hr class="w-100 clearfix d-md-none" />
+
+
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-1">
+              <img src="logo.webp" height="80px" width="200px">
+              <p><i class=""></i> info@gmail.com</p>
+              <p><i class=""></i> +1 (954) 417 7926
+
+              </p>
+              <p><i class=""></i> © 2023, SQUAD TECH SOLUTION</p>
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <hr class="my-3">
+
+
+        <section class="p-3 pt-0">
+          <div class="row d-flex align-items-center">
+
+            <div class="col-md-3 col-lg-8 text-center text-md-start">
+
+
+
+            </div>
+
+
+
+            <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+
+
+
+
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+
+    </footer>
+  </body>
+
+</html>

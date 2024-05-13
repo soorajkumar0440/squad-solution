@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+    .D1 {
+        color: orangered;
+
+        text-align: center;
+        font-size: large;
+        font-family: Poppins, sans-serif;
+        margin-top: 18%;
+        text-align: center;
+    }
+
+    .navbar-nav {
+        margin-left: 57%;
+        font-family: Poppins, sans-serif;
+        font-weight: bold;
+        color: black;
+    }
+
+    .navbar-nav .nav-link {
+        padding: .5rem 1rem;
+        transition: color 0.3s;
+        text-decoration: none;
+        color: orangered;
+    }
+
+    .navbar-nav .nav-link:hover {
+
+        text-decoration: underline;
+    }
+
+    .D2 {
+
+        margin-left: 12%;
+        margin-top: 6%;
+        font-family: Poppins, sans-serif;
+    }
+
+
+
+    .loader-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        color: orangered;
+    }
+
+    .loader-line {
+        animation: scroll 3s linear infinite;
+        background-color: orangered;
+        width: 50%;
+        height: 3px;
+        border-radius: 50px;
+        text-align: left;
+    }
+
+
+    @keyframes scroll {
+        0% {
+            width: 0;
+            background: orangered;
+        }
+
+        100% {
+            width: 100%;
+            background: orangered;
+        }
+    }
+
+    .heading {
+        margin-top: 10%;
+        margin-left: 16%;
+
+
+    }
+
+    .content {
+        margin-left: 11%;
+        color: gray;
+        margin-top: 2%;
+
+
+
+    }
+
+
+    body {
+        font-family: Poppins, sans-serif;
+    }
+
+    .column {
+
+        width: 25%;
+        padding: 0 5px;
+        margin-left: 18%;
+        border-left: 2px solid orangered;
+        margin-top: 8%;
+        display: flex;
+
+    }
+
+
+    .row {
+        margin: 0 -25px;
+    }
+
+
+    .row:after {
+        content: "";
+        clear: both;
+    }
+
+    .card {
+
+        padding: 16px;
+        border-radius: .25rem;
+        border: none;
+
+
+    }
+
+    .H {
+        margin-bottom: 2%;
+        font-family: Poppins, sans-serif;
+        font-weight: bold;
+        color: black;
+
+    }
+
+    .paragraph {
+        color: grey;
+    }
+
+    .paragraph2 {
+        color: gray;
+        margin-left: 15%;
+        margin-top: 2%;
+        font-family: Poppins, sans-serif;
+
+    }
+
+    .footer {
+        margin-top: 7%;
+        width: 100%;
+        background-color: rgb(34, 33, 33);
+        color: white;
+    }
+
+    .footer .container {
+        padding: 2rem 0;
+    }
+
+    .footer h5 {
+        color: orangered;
+
+    }
+
+    .footer p {
+        color: white;
+    }
+
+    .footer img {
+        max-width: 100%;
+    }
+
+    .footer .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .D4 {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .D4 .text {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 10%;
+        font-family: Poppins, sans-serif;
+
+    }
+
+    .image {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 8%;
+        justify-content: flex-start;
+        gap: 20px 20px;
+        margin-left: 25%;
+
+
+
+    }
+
+
+    .D4 .image {}
+
+    .D4 .image img {
+        width: 45%;
+    }
+
+
+    .paragraph3 {
+        color: rgb(109, 108, 108);
+    }
+
+    .about-office {
+        color: orangered;
+        text-align: center;
+        margin-top: 7%;
+        font-family: Poppins, sans-serif;
+
+    }
+</style>
+
+<body>
+
+    <div class="loader-wrapper" id="loader">
+        <div class="loader">
+            <img class="loader-image" src="../logo.webp" height="70px" width="100%" alt="Loading...">
+            <div class="loader-line">
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+
+        <img src="logo.webp" alt="" height="50px">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="sooraj.html">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="service.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="customers.html">Customers & Indusries<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" style="color: orangered;">About Us<span
+                            class="sr-only">(current)</span></a></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            setTimeout(function () {
+                document.getElementById("loader").style.display = "none";
+                document.getElementById("content").style.display = "block";
+            }, 2000);
+        });
+    </script>
+
+    <div class=" col-sm-12">
+        <div class="D1">
+            <h1>Collaborative Minds, Technological Pioneers: Meet Our Expert Team Driving Technological Advancements
+            </h1>
+        </div>
+    </div>
+
+    <div class="D2">
+        <img src="../d1" height="400px" width="1100px">
+    </div>
+
+    <div class="heading">
+        <h2>About Us</h2>
+        <div class="content">
+            <p>Welcome to Squad Tech Solutions, where we redefine the boundaries of web development and design. Our team
+                of visionary experts merges cutting-edge technology with artistic brilliance to create digital
+                experiences that leave a lasting impression.</p>
+
+
+        </div>
+    </div>
+    <div class="paragraph2">
+        <p class="grey">
+            With a keen eye for detail and a passion for innovation, Squad Tech Solutions goes beyond building websites.
+            We
+            sculpt immersive online environments that engage and inspire, crafting visually striking designs that
+            captivate your
+            audience from the first click.
+            But we don't stop there. We believe in the power of storytelling. Our creative wizards go beyond aesthetics,
+            weaving
+            narratives that breathe life into your brand. From meticulously crafted logos to seamless user interfaces,
+            every
+            element tells a compelling story that sets you apart.
+        </p>
+
+
+        <p class="grey">
+            With Squad Tech Solutions as your partner, you can expect nothing less than a digital masterpiece. We go
+            beyond conventional boundaries, pushing the limits of what's possible to deliver exceptional results that
+            elevate your business to unprecedented heights. Experience the difference of true artistry combined with
+            technical expertise. Join us at Squad Tech Solutions and embark on a journey that will revolutionize your
+            digital presence. Together, we'll make your brand a legend in the digital realm.
+        </p>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <div class="H">
+                    <h2>Vision</h2>
+                </div>
+                <div class="paragraph">
+                    <p>We envisage a paradigm shift in the digital realm, transcending the boundaries of
+                        conventional
+                        web
+                        development and design. Our vision is to forge a new path, where technology seamlessly
+                        intertwines
+                        with artistic brilliance, creating awe-inspiring digital experiences that redefine the
+                        way
+                        brands
+                        connect with their audiences. We aspire to be pioneers in the industry, revolutionizing
+                        the
+                        digital
+                        landscape by setting new standards of innovation, creativity, and unparalleled
+                        excellence.
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="H">
+                    <h2>Mission</h2>
+                </div>
+                <div class="paragraph">
+                    <p>Empowering businesses with visionary digital solutions that propel them towards
+                        unprecedented
+                        success. Driven by our passion for pushing the limits of what's possible, we strive to
+                        understand
+                        the intricacies of our clients' objectives and weave their stories into immersive online
+                        environments. Through meticulous craftsmanship, and a profound understanding of user
+                        behavior,
+                        we
+                        .</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-1">
+            <div class="D4">
+                <div class="text">
+                    <h1 style="color: orangered;">Meet Our Team</h1>
+                    <p class="paragraph3">Within the realm of Squad Tech Solutions, we are privileged to introduce our
+                        formidable
+                        collective, a congregation of exceptional talents that propels our triumphs. From visionary web
+                        developers, ingenious designers, and digital marketing virtuosos to wordsmiths with an
+                        impeccable command over content, every team member is a testament to our unwavering commitment
+                        to excellence.</p>
+                    <p class="paragraph3">
+                        Nurtured in a collaborative ecosystem that fosters innovation and defies limits, our team is an
+                        embodiment of passion, dedication, and unwavering resolve to exceed expectations. Enlist our
+                        services and unlock the prowess of our experts, as they breathe life into your digital
+                        aspirations
+                        with unmatched expertise and boundless creativity.
+                    </p>
+
+                </div>
+
+                <div class="image">
+                    <img src="../m1" alt="">
+                    <img src="../m3" alt="">
+                    <img src="../m5" alt="">
+                    <img src="../m6.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="about-office">
+        <h1>
+            Our Offices
+        </h1>
+    </div>
+
+    </div>
+    </div>
+    <div class="footer">
+        <footer class="text-center text-lg-start text-white mt-5" style="background-color: rgb(34, 33, 33)">
+
+            <div class="container p-4 pb-0">
+
+                <section class="">
+
+                    <div class="row">
+
+                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 mr-3">
+                            <h5 class="text-uppercase mb-4 font-weight-bold" style="color: orangered;">
+                                Contact Us
+                            </h5>
+
+                            <h6 style="color: orangered;">
+
+                                Main Office/UK Office
+                            </h6>
+                            <p>The Garage, 114 Markhouse Road, E17 8BG, London</p>
+                            <h6 style="color: orangered;">
+
+                                US Office
+                            </h6>
+                            <p>428 Southwest 80th Avenue, North Lauderdale, Florida 33068</p>
+                        </div>
+
+
+
+                        <hr class="w-100 clearfix d-md-none" />
+
+
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <h5 class="text-uppercase mb-4 font-weight-bold" style="color: orangered;">Recent
+                                News
+                            </h5>
+                            <p>
+                                <img src="../n1.png" width="50px" height="30px">
+                                <a class="../text-white">MDBootstrap</a>
+                            </p>
+                            <p>
+                                <img src="../n2.jpg" width="50px" height="30px">
+                                <a class="../text-white">MDWordPress</a>
+                            </p>
+
+                            <p>
+                                <img src="../n3.jpg" width="50px" height="30px">
+                                <a class="text-white">MDWordPress</a>
+                            </p>
+                        </div>
+
+
+                        <hr class="w-100 clearfix d-md-none" />
+
+
+
+
+                        <hr class="w-100 clearfix d-md-none" />
+
+
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-1">
+                            <img src="../logo.webp" height="80px" width="200px">
+                            <p><i class=""></i> info@gmail.com</p>
+                            <p><i class=""></i> +1 (954) 417 7926
+
+                            </p>
+                            <p><i class=""></i> © 2023, SQUAD TECH SOLUTION</p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <hr class="my-3">
+
+
+                <section class="p-3 pt-0">
+                    <div class="row d-flex align-items-center">
+
+                        <div class="col-md-3 col-lg-8 text-center text-md-start">
+
+
+
+                        </div>
+
+
+
+                        <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+
+
+
+
+                        </div>
+
+                    </div>
+                </section>
+
+            </div>
+
+        </footer>
+    </div>
+
+
+</body>
+
+</html>
